@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr 100px;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    width: 100%;
+    height: 100%;
+}
+
+/*style of cover image div  */
+/* frame */
+.frame {
+    position: absolute;
+    border: 3px solid white;
+    width: 80%;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+/* little title with lines */
+.title {
+    position: relative;
+    margin: 0 auto;
+    color: white;
+    width: 60%
+}
+
+.line1,
+.line2 {
+    position: absolute;
+    top: 50%;
+    height: 1px;
+    width: 30%;
+    background-color: #fff;
+}
+
+.line1 {
+    left: 0;
+}
+
+.line2 {
+    right: 0;
+}
+
+h1 {
+    text-transform: uppercase;
+    color: white;
+}
+
+.main_img,
+.team_main,
+.port_main,
+.brand_main {
+    position: relative;
+    align-self: center;
+    text-align: center;
+}
+
+.check {
+    color: white;
+    text-transform: uppercase;
+    border: 3px solid white;
+    border-radius: 10px;
+}
+
+.main_img {
+    background-color: pink;
+}
+
+.projects {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: purple;
+}
+
+.circle {
+    width: 50vw;
+    height: 50vw;
+    border: 10px solid blue;
+    border-radius: 50%;
+}
+
+.team_main {
+    background-color: blue;
+}
+
+
+
+/* Team's members*/
+
+.team_box {
+    text-align: center;
+}
+
+.team_box_text {
+    position: relative;
+}
+
+.team_frame1,
+.team_frame2 {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* style of team box text */
+.team_frame1 {
+    border: 3px solid white;
+    border-bottom: transparent;
+}
+
+h3 {
+    text-transform: uppercase;
+}
+
+.team_job {
+    border-bottom: 3px solid red;
+}
+
+/* style of team box image */
+.team_box_img {
+    position: relative;
+}
+
+.box_img1 {
+    width: 100vw;
+    height: 50vw;
+    background-color: pink;
+}
+
+.team_frame2 {
+    border: 3px solid black;
+    border-top: transparent;
+}
+
+/* ------------------------------------------------ */
+
+.team {
+    background-color: blueviolet;
+}
+
+.port_main {
+    background-color: brown;
+}
+
+.port {
+    background-color: burlywood;
+}
+
+.brand_main {
+    background-color: yellowgreen;
+}
+
+.brands {
+    background-color: goldenrod;
+}
