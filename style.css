@@ -142,27 +142,28 @@ h1 {
 /* Team's members*/
 
 .team_box {
+    position: relative;
+    min-height: 500px;
     text-align: center;
 }
 
-.team_box_text {
-    position: relative;
-}
-
+/* style of all elements in team box */
+.team_box_text,
+.box_img,
 .team_frame1,
 .team_frame2 {
     position: absolute;
-    width: 80%;
-    height: 80%;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
 }
 
-/* style of team box text */
-.team_frame1 {
-    border: 3px solid white;
-    border-bottom: transparent;
+/* style of each element in team box */
+/* style of text box */
+.team_box_text {
+    width: 60%;
+    height: 50%;
+    margin: 2em auto;
+    transform: translate(-50%, -100%);
 }
 
 h3 {
@@ -172,35 +173,51 @@ h3 {
 }
 
 .team_job {
+    position: relative;
+}
+
+.team_job div {
     border-bottom: 3px solid rgb(117, 7, 7);
-    padding-bottom: 1em;
+    padding-bottom: 1.2em;
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 1.2em;
 }
 
 .team_box_text span {
     font-size: 1.2em;
 }
 
-/* style of team box image */
-.team_box_img {
-    position: relative;
+/* style of frame */
+.team_frame1,
+.team_frame2 {
+    width: 80%;
+    height: 45%;
 }
 
-.box_img1 {
-    width: 100vw;
-    height: 50vw;
-    background-color: pink;
+.team_frame1 {
+    border: 3px solid black;
+    border-bottom: transparent;
+    transform: translate(-50%, -100%);
 }
 
 .team_frame2 {
-    border: 3px solid black;
+    border: 3px solid white;
     border-top: transparent;
+    transform: translate(-50%, 0);
+}
+
+/* style of team box image */
+
+.box_img {
+    width: 100vw;
+    min-height: 50%;
+    background-color: aqua;
+    bottom: 0;
+    transform: translate(-50%, 0);
 }
 
 /* ------------------------------------------------ */
-
-.team {
-    background-color: blueviolet;
-}
 
 .port_main {
     background-image: url(img/port_main.png);
