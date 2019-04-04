@@ -67,6 +67,7 @@ h1 {
 }
 
 .main_img,
+.projects,
 .team_main,
 .port_main,
 .brand_main,
@@ -114,19 +115,52 @@ footer {
     width: 25%;
 }
 
-/* ----------------------------- */
+/* Projects' circles */
+
 .projects {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    background-color: purple;
+    width: 50%;
+    justify-self: center;
+    margin-top: 2em;
+    margin-bottom: 3em;
 }
 
 .circle {
-    width: 50vw;
-    height: 50vw;
-    border: 10px solid blue;
+    position: relative;
+    width: 45vw;
+    height: 45vw;
+    margin: 1em;
+    border: 3px solid rgb(196, 193, 193);
     border-radius: 50%;
 }
+
+.circle_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.circle_text p {
+    font-size: 4em;
+    font-weight: 700;
+}
+
+.circle_text span {
+    text-transform: uppercase;
+}
+
+.circle1 {
+    color: rgb(229, 70, 51);
+}
+
+.circle2 {
+    color: rgb(5, 152, 134);
+}
+
+.circle3 {
+    color: rgb(17, 40, 58);
+}
+
 
 /* ----------------------------- */
 
