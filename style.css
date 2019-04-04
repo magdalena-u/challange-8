@@ -69,7 +69,8 @@ h1 {
 .main_img,
 .team_main,
 .port_main,
-.brand_main {
+.brand_main,
+footer {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -85,9 +86,7 @@ h1 {
 /* style of main image */
 
 .main_img {
-
     background-image: url(img/main.png);
-
 }
 
 .main_img .title {
@@ -114,8 +113,6 @@ h1 {
 .main_img .line2 {
     width: 25%;
 }
-
-
 
 /* ----------------------------- */
 .projects {
@@ -149,7 +146,10 @@ h1 {
 
 /* style of all elements in team box */
 .team_box_text,
-.box_img,
+.box_img1,
+.box_img2,
+.box_img3,
+.box_img4,
 .team_frame1,
 .team_frame2 {
     position: absolute;
@@ -209,15 +209,35 @@ h3 {
 
 /* style of team box image */
 
-.box_img {
+.box_img1,
+.box_img2,
+.box_img3,
+.box_img4 {
     width: 100vw;
     min-height: 50%;
     background-color: aqua;
     bottom: 0;
     transform: translate(-50%, 0);
+    background-size: cover;
 }
 
-/* ------------------------------------------------ */
+.box_img1 {
+    background-image: url(img/team1.png);
+}
+
+.box_img2 {
+    background-image: url(img/team2.png)
+}
+
+.box_img3 {
+    background-image: url(img/team3.png);
+}
+
+.box_img4 {
+    background-image: url(img/team4.png);
+}
+
+/* Portfolio */
 
 .port_main {
     background-image: url(img/port_main.png);
@@ -229,10 +249,69 @@ h3 {
 }
 
 .port {
-    background-color: burlywood;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
-/* main brand */
+.port div {
+    height: 100px;
+    background-size: cover;
+    background-position: 50% 50%;
+    opacity: 0.5;
+}
+
+.port1 {
+    background-image: url(img/port1.png);
+}
+
+.port2 {
+    background-image: url(img/port2.png);
+}
+
+.port3 {
+    background-image: url(img/port3.png);
+}
+
+.port4 {
+    background-image: url(img/port4.png);
+}
+
+.port5 {
+    background-image: url(img/port5.png);
+}
+
+.port6 {
+    background-image: url(img/port6.png);
+}
+
+.port7 {
+    background-image: url(img/port7.png);
+}
+
+.port8 {
+    background-image: url(img/port8.png);
+}
+
+.port9 {
+    background-image: url(img/port9.png);
+}
+
+.port10 {
+    background-image: url(img/port10.png);
+}
+
+.port11 {
+    background-image: url(img/port11.png);
+}
+
+.port12 {
+    background-image: url(img/port12.png);
+}
+
+
+/* Brands */
+
 .brand_main {
     background-image: url(img/brand_main.png)
 }
@@ -243,5 +322,93 @@ h3 {
 }
 
 .brands {
-    background-color: goldenrod;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.brands div {
+    height: 150px;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    opacity: 0.3;
+}
+
+.brand1 {
+    background-image: url(img/brand1.png);
+}
+
+.brand2 {
+    background-image: url(img/brand2.png);
+}
+
+.brand3 {
+    background-image: url(img/brand3.png);
+}
+
+.brand4 {
+    background-image: url(img/brand4.png);
+}
+
+.brand5 {
+    background-image: url(img/brand5.png);
+}
+
+.brand6 {
+    background-image: url(img/brand6.png);
+}
+
+.brand7 {
+    background-image: url(img/brand7.png);
+}
+
+.brand8 {
+    background-image: url(img/brand12.png);
+}
+
+.brand9 {
+    background-image: url(img/brand9.png);
+}
+
+.brand10 {
+    background-image: url(img/brand10.png);
+}
+
+.brand11 {
+    background-image: url(img/brand11.png);
+}
+
+.brand12 {
+    background-image: url(img/brand12.png);
+}
+
+
+
+/* Footer */
+footer {
+    background: black;
+    color: white;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+footer div {
+    width: 50%;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+footer h3 {
+    position: relative;
+}
+
+.fo_line {
+    height: 1px;
+    width: 80%;
+    margin: 0 auto;
+    background-color: rgb(15, 117, 92);
+    padding: 0;
+    margin-top: 0.5em;
+    margin-bottom: 0.8em;
 }
