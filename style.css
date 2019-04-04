@@ -6,19 +6,18 @@
 body {
     display: grid;
     position: relative;
-    grid-template-columns: 1fr;
-    grid-template-rows: 50px 1fr 100px;
+    /* grid-template-columns: 1fr; */
+    /* grid-template-rows: 50px 1fr 100px; */
     width: 100vw;
-    height: 100vh;
     font-family: 'Quicksand', sans-serif;
     font-weight: 400;
 }
 
 main {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 3fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    width: 100%;
+    /* grid-template-columns: 1fr; */
+    /* grid-template-rows: 1fr 3fr 1fr 1fr 1fr 1fr 1fr 1fr; */
+    width: 100vw;
     height: 100%;
 }
 
@@ -37,6 +36,7 @@ main {
 /* little title with lines */
 .title {
     position: relative;
+    font-size: 1.4em;
     margin: 0 auto;
     color: white;
     width: 60%
@@ -60,8 +60,10 @@ main {
 }
 
 h1 {
+    font-size: 2.8em;
     text-transform: uppercase;
     color: white;
+    margin-bottom: 1em;
 }
 
 .main_img,
@@ -69,21 +71,53 @@ h1 {
 .port_main,
 .brand_main {
     position: relative;
-    align-self: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 250px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+/* style of main image */
+
+.main_img {
+
+    background-image: url(img/main.png);
+
+}
+
+.main_img .title {
+    width: 80%;
 }
 
 .check {
     color: white;
     text-transform: uppercase;
     border: 3px solid white;
-    border-radius: 10px;
+    border-radius: 25px;
+    width: 30%;
+    padding: 0.3em;
 }
 
-.main_img {
-    background-color: pink;
+.fas {
+    color: white;
+    padding-top: 1em;
+    font-size: 1.4em;
 }
 
+
+.main_img .line1,
+.main_img .line2 {
+    width: 25%;
+}
+
+
+
+/* ----------------------------- */
 .projects {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
@@ -97,11 +131,13 @@ h1 {
     border-radius: 50%;
 }
 
+/* ----------------------------- */
+
+/* Our team */
+
 .team_main {
-    background-color: blue;
+    background-image: url(img/team_main.png);
 }
-
-
 
 /* Team's members*/
 
@@ -131,10 +167,17 @@ h1 {
 
 h3 {
     text-transform: uppercase;
+    font-size: 2em;
+    font-weight: 400;
 }
 
 .team_job {
-    border-bottom: 3px solid red;
+    border-bottom: 3px solid rgb(117, 7, 7);
+    padding-bottom: 1em;
+}
+
+.team_box_text span {
+    font-size: 1.2em;
 }
 
 /* style of team box image */
@@ -160,15 +203,26 @@ h3 {
 }
 
 .port_main {
-    background-color: brown;
+    background-image: url(img/port_main.png);
+}
+
+.port_main .line1,
+.port_main .line2 {
+    width: 10%;
 }
 
 .port {
     background-color: burlywood;
 }
 
+/* main brand */
 .brand_main {
-    background-color: yellowgreen;
+    background-image: url(img/brand_main.png)
+}
+
+.brand_main .line1,
+.brand_main .line2 {
+    width: 20%;
 }
 
 .brands {
