@@ -257,10 +257,6 @@ footer {
     }
 }
 
-
-
-/* ----------------------------- */
-
 /* Our team */
 
 .team_main {
@@ -413,6 +409,11 @@ h3 {
     background-size: cover;
     background-position: 50% 50%;
     opacity: 0.5;
+    cursor: pointer;
+}
+
+.port div:hover {
+    opacity: 1;
 }
 
 .port1 {
@@ -487,6 +488,13 @@ h3 {
     background-repeat: no-repeat;
     background-position: 50% 50%;
     opacity: 0.3;
+    filter: grayscale(100%);
+    cursor: pointer;
+}
+
+.brands div:hover {
+    filter: grayscale(0%);
+    opacity: 0.5;
 }
 
 .brand1 {
