@@ -75,7 +75,10 @@ window.addEventListener('scroll', addInterval);
 
 //add listener on menu
 
-let burger = document.querySelector('.menu');
+let burger = document.querySelector('.burger');
+let menuContent = document.querySelector('.menu_content');
+
 burger.addEventListener('click', function () {
-    burger.classList.toggle('active')
+    burger.classList.toggle('active');
+    menuContent.classList.toggle('active');
 });
