@@ -13,7 +13,93 @@ body {
     font-weight: 400;
 }
 
-main {
+
+nav {
+    position: relative;
+    height: 80px;
+}
+
+.logo {
+    position: absolute;
+    display: block;
+    height: 60%;
+    width: 100px;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    background-image: url(img/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* nav menu*/
+.menu {
+    position: relative;
+    height: 100%;
+    width: 50px;
+    top: 50%;
+    left: 80%;
+    transform: translateY(-50%);
+}
+
+.menu div {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 5px;
+    background-color: black;
+    transform: translateY(-50%);
+    border-radius: 4px;
+    opacity: 1;
+    transition: .5s .1s;
+}
+
+.menu.active div {
+    background-color: #fff;
+}
+
+.menu div::before,
+.menu div::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 5px;
+    background-color: black;
+    border-radius: 4px;
+    transform: rotate(0deg);
+    transition-property: transform, top;
+    transition-duration: .3s, .3s;
+    transition-delay: 0s, .3s;
+}
+
+.menu div::before {
+    top: 16px;
+}
+
+.menu div::after {
+    top: -16px;
+
+}
+
+.menu.active div::before,
+.menu.active div::after {
+    transition-property: top, transform;
+    transition-duration: .3s, .3s;
+    transition-delay: 0s, .3s;
+}
+
+.menu.active div::before {
+    top: 0px;
+    transform: rotate(45deg);
+}
+
+.menu.active div::after {
+    top: 0px;
+    transform: rotate(-45deg);
+}
+
+.menu main {
     display: grid;
     /* grid-template-columns: 1fr; */
     /* grid-template-rows: 1fr 3fr 1fr 1fr 1fr 1fr 1fr 1fr; */
@@ -75,6 +161,7 @@ footer {
     position: relative;
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
     min-height: 250px;
     width: 100%;
     justify-content: center;
@@ -119,7 +206,6 @@ footer {
 
 .projects {
     width: 50%;
-    justify-self: center;
     margin-top: 2em;
     margin-bottom: 3em;
 }

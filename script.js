@@ -29,8 +29,6 @@ circleTwo.addNumber(35)
 const circleThree = new Array()
 circleThree.addNumber(80)
 
-//----------------------------------------
-
 const letCountOne = () => {
     let numberOne = document.querySelector('.circle1');
     if (index < circleOne.tab.length) {
@@ -74,3 +72,10 @@ function addInterval(e) {
 }
 
 window.addEventListener('scroll', addInterval);
+
+//add listener on menu
+
+let burger = document.querySelector('.menu');
+burger.addEventListener('click', function () {
+    burger.classList.toggle('active')
+});
