@@ -67,7 +67,8 @@ function addInterval(e) {
 
     if (e.target.documentElement.scrollTop > 280) {
         addNumber = setInterval(letCountThree, 200);
-        document.querySelector('.circle_mask3').classList.add('circle3_active');
+        document.querySelector('.right').classList.add('circle3_active');
+        document.querySelector('.left').classList.add('circle3_active_part2');
     }
 }
 

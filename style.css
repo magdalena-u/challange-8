@@ -232,6 +232,10 @@ footer {
 }
 
 /* Projects' circles */
+:root {
+    --circle-size: 45vw;
+    --circle-min-size: 180px;
+}
 
 .projects {
     width: 50%;
@@ -243,8 +247,10 @@ footer {
 
 .circle_input {
     position: relative;
-    width: 45vw;
-    height: 45vw;
+    width: var(--circle-size);
+    height: var(--circle-size);
+    min-width: var(--circle-min-size);
+    min-height: var(--circle-min-size);
     margin: 1em;
 }
 
@@ -280,22 +286,27 @@ footer {
 /* Circel radius */
 
 .circle_radius {
-    --circle-size: 45vw;
+
     position: relative;
     width: var(--circle-size);
     height: var(--circle-size);
+    min-width: var(--circle-min-size);
+    min-height: var(--circle-min-size);
     background-color: rgb(216, 206, 206);
     border-radius: 50%;
 }
 
 .circle_border {
     position: absolute;
-    top: 2.5vw;
-    left: 2.5vw;
+    top: 50%;
+    left: 50%;
     width: 40vw;
     height: 40vw;
+    min-width: 160px;
+    min-height: 160px;
     background-color: #fff;
     border-radius: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .circle_fill1,
@@ -304,6 +315,8 @@ footer {
     position: absolute;
     width: var(--circle-size);
     height: var(--circle-size);
+    min-width: var(--circle-min-size);
+    min-height: var(--circle-min-size);
     border-radius: 50%;
 }
 
@@ -323,8 +336,10 @@ footer {
 .circle_mask2,
 .circle_mask3 {
     position: absolute;
-    width: 45vw;
-    height: 45vw;
+    width: var(--circle-size);
+    height: var(--circle-size);
+    min-width: var(--circle-min-size);
+    min-height: var(--circle-min-size);
     border-radius: 50%;
     clip-path: polygon(50% -50%, 50% 50%, 50% -50%);
 }
@@ -340,7 +355,12 @@ footer {
 }
 
 .circle3_active {
-    animation: anim_circle3 2s 1;
+    animation: anim_circle3 1.5s 1;
+    animation-fill-mode: forwards;
+}
+
+.circle3_active_part2 {
+    animation: anim_circle3_2 1s 1.5s 1;
     animation-fill-mode: forwards;
 }
 
@@ -360,17 +380,27 @@ footer {
     }
 
     100% {
-        clip-path: polygon(50% -50%, 50% 50%, 140% 0%);
+        clip-path: polygon(50% -50%, 50% 50%, 140% -50%);
     }
 }
 
 @keyframes anim_circle3 {
     0% {
-        clip-path: polygon(50% 0%, 50% 0%, 75% 0%);
+        clip-path: polygon(50% 0%, 75% 0%, 50% 0%);
     }
 
     100% {
-        clip-path: polygon(50% 0%, 200% 0%, 75% 100%);
+        clip-path: polygon(50% 50%, 140% 50%, 50% -50%);
+    }
+}
+
+@keyframes anim_circle3_2 {
+    0% {
+        clip-path: polygon(50% 50%, 100% 50%, 150% 50%);
+    }
+
+    100% {
+        clip-path: polygon(50% 50%, 150% 50%, 75% 200%);
     }
 }
 
@@ -778,25 +808,22 @@ footer h3 {
     }
 
     /* Projects' circles */
+    :root {
+        --circle-size: 15vw;
+        --circle-min-size: 200px;
+    }
+
     .projects {
         width: 100%;
         flex-direction: row;
-    }
-
-    .circle_input {
-        width: 15vw;
-        height: 15vw;
-    }
-
-    .circle_radius {
-        --circle-size: 15vw;
+        justify-content: space-around;
     }
 
     .circle_border {
-        top: 1.5vw;
-        left: 1.5vw;
-        width: 12vw;
-        height: 12vw;
+        width: 13vw;
+        height: 13vw;
+        min-width: 180px;
+        min-height: 180px;
     }
 
     .circle_container {
@@ -805,12 +832,10 @@ footer h3 {
         align-items: center;
     }
 
-    .circle_mask1,
-    .circle_mask2,
-    .circle_mask3 {
-        width: 15vw;
-        height: 15vw;
+    .circle_container span {
+        width: var(--circle-size);
     }
+
 
     /* Team's members*/
     .team {
