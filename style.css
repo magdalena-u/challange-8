@@ -110,7 +110,7 @@ nav {
 
 /* menu content */
 .menu_content {
-    position: fixed;
+    position: absolute;
     display: flex;
     flex-direction: column;
     height: calc(100vh - 80px);
