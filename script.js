@@ -78,8 +78,26 @@ window.addEventListener('scroll', addInterval);
 
 let burger = document.querySelector('.burger');
 let menuContent = document.querySelector('.menu_content');
+let times = document.querySelector('.fa-times');
 
 burger.addEventListener('click', function () {
     burger.classList.toggle('active');
     menuContent.classList.toggle('active');
 });
+
+//add listener to portfolio
+
+let portItems = document.querySelectorAll('.port div');
+let portView = document.querySelector('.port_overview');
+
+function portfolioOverview() {
+    portView.classList.add('active')
+    let currentId = this.id;
+    let img = document.querySelector('.port_overview_img');
+    img.style.backgroundImage = `url(img/${currentId}.png)`
+}
+
+portItems.forEach(item => item.addEventListener('click', portfolioOverview));
+times.addEventListener('click', function () {
+    portView.classList.remove('active');
+})

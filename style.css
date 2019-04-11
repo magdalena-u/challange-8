@@ -545,6 +545,7 @@ h3 {
 }
 
 .port div {
+    position: relative;
     height: 100px;
     background-size: cover;
     background-position: 50% 50%;
@@ -556,89 +557,177 @@ h3 {
     opacity: 1;
 }
 
-.port1 {
+.fa-eye {
+    display: none;
+}
+
+.port div div {
+    background-color: purple;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    z-index: 2;
+}
+
+.port div:hover .fa-eye {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    color: white;
+    font-size: 3em;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    border: solid 3px white;
+}
+
+
+
+#port1 {
     background-image: url(img/port1.png);
 }
 
-.port2 {
+#port2 {
     background-image: url(img/port2.png);
 }
 
-.port3 {
+#port3 {
     background-image: url(img/port3.png);
 }
 
-.port4 {
+#port4 {
     background-image: url(img/port4.png);
 }
 
-.port5 {
+#port5 {
     background-image: url(img/port5.png);
 }
 
-.port6 {
+#port6 {
     background-image: url(img/port6.png);
 }
 
-.port7 {
+#port7 {
     background-image: url(img/port7.png);
 }
 
-.port8 {
+#port8 {
     background-image: url(img/port8.png);
 }
 
-.port9 {
+#port9 {
     background-image: url(img/port9.png);
 }
 
-.port10 {
+#port10 {
     background-image: url(img/port10.png);
 }
 
-.port11 {
+#port11 {
     background-image: url(img/port11.png);
 }
 
-.port12 {
+#port12 {
     background-image: url(img/port12.png);
 }
 
-.port13 {
+#port13 {
     background-image: url(img/port13.png);
 }
 
-.port14 {
+#port14 {
     background-image: url(img/port14.png);
 }
 
-.port15 {
+#port15 {
     background-image: url(img/port15.png);
 }
 
-.port16 {
+#port16 {
     background-image: url(img/port16.png);
 }
 
-.port17 {
+#port17 {
     background-image: url(img/port17.png);
 }
 
-.port18 {
+#port18 {
     background-image: url(img/port18.png);
 }
 
-.port19 {
+#port19 {
     background-image: url(img/port19.png);
 }
 
-.port20 {
+#port20 {
     background-image: url(img/port20.png);
 }
 
-.port21 {
+#port21 {
     background-image: url(img/port21.png);
 }
+
+.port_overview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    width: 100vw;
+    top: 80px;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    height: 80%;
+    z-index: 2;
+    background-color: #fff;
+    transform: translateX(100%);
+    transition: 0.5s;
+
+}
+
+.port_overview.active {
+    transform: translateX(0);
+}
+
+.fa-times {
+    position: absolute;
+    font-size: 1.6em;
+    padding: 0;
+    right: 30vw;
+    top: 0;
+    color: black;
+}
+
+.port_overview_img {
+    width: 40vw;
+    height: 40vw;
+    background-size: cover;
+}
+
+.port_overview_title {
+    width: 40vw;
+    text-align: center;
+}
+
+.port_overview_title div {
+    border-bottom: 3px solid rgb(17, 40, 58);
+    padding-bottom: 1.2em;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 1.2em;
+}
+
+.port_overview span {
+    width: 70vw;
+}
+
+
 
 /* Brands */
 
@@ -773,7 +862,7 @@ footer h3 {
         font-size: 1.2em;
     }
 
-    .menu_social i {
+    .fab {
         padding-right: 1em;
     }
 
@@ -871,10 +960,13 @@ footer h3 {
     }
 
     .team_frame1,
-    .team_frame2,
-    .team_arrow {
+    .team_frame2 {
         width: 45%;
         height: 80%;
+    }
+
+    .team_arrow {
+        overflow: visible;
     }
 
     .team_frame1 {
@@ -889,6 +981,7 @@ footer h3 {
         transform: translate(-100%, -50%);
     }
 
+    /* order of elements */
     .team_box:nth-of-type(1) .team_box_text,
     .team_box:nth-of-type(3) .team_box_text {
         order: 2;
@@ -914,6 +1007,29 @@ footer h3 {
 
     .port div {
         height: 150px;
+    }
+
+    .port_overview {
+        width: 65%;
+        transform: translateX(-100%);
+    }
+
+    .fa-times {
+        right: 25vw;
+    }
+
+    .port_overview_img {
+        width: 15vw;
+        height: 15vw;
+        background-image: url(img/port1.png)
+    }
+
+    .port_overview_title {
+        width: 15vw;
+    }
+
+    .port_overview span {
+        width: 20vw;
     }
 
     /* Brands */
